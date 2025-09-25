@@ -1,17 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function App() {
 
-  return (
-    <div id="main"
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // Make the inline HTML’s onclick="footballFi()" work.
+    window.footballFi = () => {
+      navigate("/login");
+    };
+    return () => {
+      delete window.footballFi;
+    };
+  }, [navigate]);
+
+    const html = `<div id="main"
       data-framer-hydrate-v2="{&quot;routeId&quot;:&quot;augiA20Il&quot;,&quot;localeId&quot;:&quot;default&quot;,&quot;breakpoints&quot;:[{&quot;hash&quot;:&quot;susg66&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1600px)&quot;},{&quot;hash&quot;:&quot;72rtr7&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 1200px) and (max-width: 1599px)&quot;},{&quot;hash&quot;:&quot;lmks9r&quot;,&quot;mediaQuery&quot;:&quot;(min-width: 810px) and (max-width: 1199px)&quot;},{&quot;hash&quot;:&quot;wutmml&quot;,&quot;mediaQuery&quot;:&quot;(max-width: 809px)&quot;}]}"
       data-framer-ssr-released-at="2025-08-12T07:50:36.485Z" data-framer-page-optimized-at="2025-08-15T11:39:08.503Z"
       data-framer-generated-page="">
-      <style data-framer-html-style="">{`
+      <style data-framer-html-style="">{
         html body {
           background: rgb(255, 255, 255);
         }
-      `}</style>
+      }</style>
       <div data-framer-root="" class="framer-0kyp1 framer-miKoZ framer-no3c6 framer-cNg3u framer-kC75U framer-72rtr7"
         style="min-height:100vh;width:auto">
         <nav class="framer-1issx4h" data-framer-name="Navigation">
@@ -736,6 +748,6 @@ export default function App() {
         </div>
       </div>
       <div id="overlay"></div>
-    </div>
-  );
+    </div>`;
+    return <div dangerouslySetInnerHTML={{ __html: html }} />;
 }
