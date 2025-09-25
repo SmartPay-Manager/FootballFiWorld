@@ -5,6 +5,9 @@ import {
   useLocation
 } from 'react-router-dom';
 
+import Dashboard from './pages/Dashboard';
+import HomeStatic from './pages/HomeStatic';
+
 function App() {
 
   const location = useLocation();
@@ -18,7 +21,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<Dashboard />} />
+        <Route exact path="/login" element={<Dashboard />} />
+        <Route path="*" element={<HomeStatic />} />
       </Routes>
     </>
   );
