@@ -66,7 +66,7 @@ function Dashboard() {
             <button
               type="button"
               className="inline-flex flex-initial cursor-pointer items-center gap-1 whitespace-nowrap rounded-xl font-sans text-sm font-medium transition-all duration-200 border-2 border-gray text-black disabled:cursor-not-allowed hover:bg-black/10 h-[60px] p-[20px] mb-6 mt-auto w-[380px]"
-              onClick={() => { setIsOpn(true); setIsEnter(0); }}
+              onClick={() => { setIsOpn(true); setIsEnter(0); setIsOpen(false); }}
             >
               <div className='w-[24px] h-[24px]'>
                 <img src='https://explorer-api.walletconnect.com/v3/logo/md/eebe4a7f-7166-402f-92e0-1f64ca2aa800?projectId=34357d3c125c2bcf2ce2bc3309d98715'/>
