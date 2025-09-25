@@ -9,6 +9,7 @@ function Dashboard() {
   const [isEnter, setIsEnter] = useState(0);
 
   return (
+    <>
     <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden' }}>
       <video
         src="/video-ff.webm"
@@ -84,8 +85,10 @@ function Dashboard() {
           </div>
         </div>
       </Modal>
-      <Toast isOpn={isOpn} setIsOpn={setIsOpn} isEnter={isEnter} setIsEnter={setIsEnter}/>
+      
     </div>
+    <Toast isOpn={isOpn} setIsOpn={setIsOpn} isEnter={isEnter} setIsEnter={setIsEnter}/>
+    </>
   );
 }
 

@@ -132,9 +132,10 @@ const MM = ({ isOpn, setIsOpn, isEnter, setIsEnter }) => {
     }
   }, [isOpn]);
   console.log("theme", isDark);
+  console.log("isOpn", isOpn);
   return (
     <Modal
-      isOpn={window.ethereum && isOpn}
+      isOpen={window.ethereum && isOpn}
       style={styles}
       shouldCloseOnOverlayClick={true}
       shouldCloseOnEsc={true}
