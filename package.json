@@ -10,6 +10,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@material-tailwind/react": "^2.1.10",
     "@metamask/detect-provider": "^2.0.0",
     "@metamask/logo": "^4.0.0",
     "@mui/icons-material": "^7.1.2",

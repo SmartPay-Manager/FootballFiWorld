@@ -119,6 +119,7 @@ const MM = ({ isOpn, setIsOpn, isEnter, setIsEnter }) => {
       if (!window.ethereum) {
         alert("Please install MetaMask!");
         window.open("https://metamask.io/download.html", "_blank");
+        setIsOpn(false);
         return;
       }
       setTimeout(() => {
